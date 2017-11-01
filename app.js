@@ -1,7 +1,10 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const bodyParser = require('body-parser')
 const logger = require('morgan')
+
+app.use(cors())
 
 app.disable('x-powered-by')
 if (process.env.NODE_ENV === 'development') app.use(logger('dev'))
