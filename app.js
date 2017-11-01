@@ -5,8 +5,7 @@ const bodyParser = require('body-parser')
 const logger = require('morgan')
 
 app.disable('x-powered-by')
-//if (process.env.NODE_ENV === 'development')
-app.use(logger('dev'))
+if (process.env.NODE_ENV === 'development') app.use(logger('dev'))
 
 app.use(bodyParser.json())
 
